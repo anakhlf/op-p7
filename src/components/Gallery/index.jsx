@@ -1,12 +1,13 @@
 import '../../styles/index.css'; 
 
+
 //Components
-import Cart from '../Cart/index.jsx';
+import ListingGallery from '../ListingGallery';
 
 function Gallery () {
     return (
     <div className='gallery'>
-        <Cart />
+        <ListingGallery />
     </div>
     )
 }

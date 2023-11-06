@@ -1,10 +1,11 @@
+import listings from '../../assets/listings.json';
 import '../../styles/index.css'; 
 
-function Cart () {
+function Cart ({title, cover}) {
     return (
         <article className="cart">
-            <a></a>
-            <p>Titre de la <br />location</p>
+            <img src={cover} alt={`Couverture de ${title}`} className='image-logement' />
+            <p className='logement-title' >{title}</p>
         </article>
     )
 }

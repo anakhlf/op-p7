@@ -82,25 +82,47 @@ $secondarycolor: #F7F7F7;
     align-items: center;
     margin: auto;
     width: 1240px;
-    height: 829px;
     background-color: $secondarycolor ;
     margin-top: 43px;
     border-radius: 25px;
+
+    .listing-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px 60px;
+        padding: 56px 50px 43px 50px;
+
+        .cart {
+            height: 320px;
+            width: 320px;
+            display: flex;
+            background-color: #FF6060;
+            flex-direction: column;
+            justify-content: end;
+            color: white;
+            font-size: 18px;
+            border-radius: 10px;
+            font-weight: 500;
+            position: relative;
+
+            .logement-title {
+                position: absolute;
+                padding-left: 20px;
+                padding-bottom: 20px;
+            }
+
+            .image-logement {
+                height: 340px;
+                width: 340px;
+                border-radius: 10px;
+                position: absolute;
+                margin: 0px;
+            }
+        }
+    }
 }
 
-.cart {
-    height: 340px;
-    width: 340px;
-    background-color: $primarycolor;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-}
+
 
 
 //FOOTER
