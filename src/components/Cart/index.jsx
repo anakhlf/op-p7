@@ -5,6 +5,7 @@ function Cart ({title, cover}) {
     return (
         <article className="cart">
             <img src={cover} alt={`Couverture de ${title}`} className='image-logement' />
+            <div className='overlay'></div>
             <p className='logement-title' >{title}</p>
         </article>
     )

@@ -11,6 +11,7 @@ $secondarycolor: #F7F7F7;
 * {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
 }
 
 .nav {
@@ -105,6 +106,13 @@ $secondarycolor: #F7F7F7;
             font-weight: 500;
             position: relative;
 
+            .overlay {
+                height: 340px;
+                width: 340px;
+                background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+                position: absolute;
+            }
+
             .logement-title {
                 position: absolute;
                 padding-left: 20px;
@@ -147,5 +155,70 @@ $secondarycolor: #F7F7F7;
         font-weight: 500;
         font-size: 24px;
         color: white;
+    }
+}
+
+//A PROPOS
+.values-galery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 38px 0px;
+
+    .block-textoverflow {
+        width: 1023px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        border-radius: 5px;
+
+        .top-bar {
+            height: 52px;
+            background-color: $primarycolor;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            font-size: 24px;
+            border-radius: 5px;
+            color: white;
+            padding: 0 17px;
+
+            .arrow {
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+            }
+
+            .arrow.down {
+                transform: rotate(0deg);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .arrow.up {
+                transform: rotate(180deg);
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+
+        .text-overflow {
+            background-color: $secondarycolor;
+            color: $primarycolor;
+            border-radius: 0px 0px 5px 5px;
+            padding: 0 20px; 
+            overflow: hidden;
+            transform-origin: top; 
+            transform: scaleY(0); 
+            opacity: 0; 
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .text-overflow.open {
+            padding: 22px 20px; 
+            transform: scaleY(1); 
+            opacity: 1; 
+        }
+
     }
 }

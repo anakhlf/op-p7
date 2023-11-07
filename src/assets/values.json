@@ -1,0 +1,22 @@
+[
+    {
+        "className": "value-title",
+		"title": "Fiabilité",
+		"description": "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements et toutes les informations sont régulièrement vérifiées par nos équipes."
+    },
+    {
+        "className": "value-title",
+		"title": "Respect",
+		"description": "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements et toutes les informations sont régulièrement vérifiées par nos équipes."
+    },
+    {
+        "className": "value-title",
+		"title": "Service",
+		"description": "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements et toutes les informations sont régulièrement vérifiées par nos équipes."
+    },
+    {
+        "className": "value-title",
+		"title": "Sécurité",
+		"description": "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements et toutes les informations sont régulièrement vérifiées par nos équipes."
+    }
+]
