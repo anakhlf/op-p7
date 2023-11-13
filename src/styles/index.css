@@ -127,20 +127,36 @@
 }
 
 .values-galery {
+  width: 1240px;
+}
+
+.values-galery {
+  margin-top: 38px;
+  margin-bottom: 38px;
+  gap: 30px;
+  margin: auto;
+}
+
+.values-galery,
+.log-equipments,
+.log-description {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin: 38px 0px;
 }
-.values-galery .block-textoverflow {
-  width: 1023px;
-  display: flex;
+.values-galery .block-textoverflow,
+.log-equipments .block-textoverflow,
+.log-description .block-textoverflow {
+  width: 100%;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: auto;
   border-radius: 5px;
 }
-.values-galery .block-textoverflow .top-bar {
+.values-galery .block-textoverflow .top-bar,
+.log-equipments .block-textoverflow .top-bar,
+.log-description .block-textoverflow .top-bar {
   height: 52px;
   background-color: #FF6060;
   display: flex;
@@ -152,20 +168,28 @@
   color: white;
   padding: 0 17px;
 }
-.values-galery .block-textoverflow .top-bar .arrow {
+.values-galery .block-textoverflow .top-bar .arrow,
+.log-equipments .block-textoverflow .top-bar .arrow,
+.log-description .block-textoverflow .top-bar .arrow {
   width: 32px;
   height: 32px;
   cursor: pointer;
 }
-.values-galery .block-textoverflow .top-bar .arrow.down {
+.values-galery .block-textoverflow .top-bar .arrow.down,
+.log-equipments .block-textoverflow .top-bar .arrow.down,
+.log-description .block-textoverflow .top-bar .arrow.down {
   transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
-.values-galery .block-textoverflow .top-bar .arrow.up {
+.values-galery .block-textoverflow .top-bar .arrow.up,
+.log-equipments .block-textoverflow .top-bar .arrow.up,
+.log-description .block-textoverflow .top-bar .arrow.up {
   transform: rotate(180deg);
   transition: transform 0.3s ease-in-out;
 }
-.values-galery .block-textoverflow .text-overflow {
+.values-galery .block-textoverflow .text-overflow,
+.log-equipments .block-textoverflow .text-overflow,
+.log-description .block-textoverflow .text-overflow {
   background-color: #F7F7F7;
   color: #FF6060;
   border-radius: 0px 0px 5px 5px;
@@ -176,10 +200,112 @@
   opacity: 0;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-.values-galery .block-textoverflow .text-overflow.open {
+.values-galery .block-textoverflow .text-overflow.open,
+.log-equipments .block-textoverflow .text-overflow.open,
+.log-description .block-textoverflow .text-overflow.open {
   padding: 22px 20px;
   transform: scaleY(1);
   opacity: 1;
+}
+
+.caroussel {
+  width: 1240px;
+  height: 415px;
+  position: relative;
+  display: flex;
+  flex-direction: wrap;
+  align-items: center;
+  margin: auto;
+  border-radius: 25px;
+}
+.caroussel .log-pictures {
+  width: 1240px;
+  height: 415px;
+  border-radius: 25px;
+}
+.caroussel .arrow-left {
+  height: 79.2px;
+  position: absolute;
+  left: 23px;
+  cursor: pointer;
+}
+.caroussel .arrow-right {
+  height: 79.2px;
+  position: absolute;
+  right: 23px;
+  cursor: pointer;
+}
+.caroussel .counter {
+  color: white;
+  position: absolute;
+  top: 357px;
+  margin-left: 47%;
+}
+
+.section__log-description {
+  width: 1240px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 30px;
+}
+.section__log-description .div__title-place {
+  color: #FF6060;
+}
+.section__log-description .div__title-place .log-title {
+  font-size: 36px;
+  font-weight: 500;
+}
+.section__log-description .div__title-place .log-place {
+  font-size: 18px;
+}
+.section__log-description .div__host {
+  display: flex;
+  justify-content: end;
+  color: #FF6060;
+  gap: 10px;
+  align-items: center;
+  height: 64px;
+}
+.section__log-description .div__host .picture-host {
+  border-radius: 100px;
+  width: 64px;
+}
+.section__log-description .log-tags {
+  gap: 10px;
+  display: flex;
+  flex-direction: wrap;
+  margin-top: 20px;
+  height: 25px;
+}
+.section__log-description .log-tags .span__tag {
+  padding: 0 41px;
+  height: 25px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section__log-description .div__log-rating {
+  height: 24px;
+}
+.section__log-description .div__log-rating .log-rating {
+  display: flex;
+  justify-content: end;
+  margin-top: 27px;
+  gap: 14px;
+}
+.section__log-description .log-equipments,
+.section__log-description .log-description {
+  width: 582px;
+  margin-top: 0px;
+}
+.section__log-description .log-description {
+  justify-self: end;
 }
 
 /*# sourceMappingURL=index.css.map */

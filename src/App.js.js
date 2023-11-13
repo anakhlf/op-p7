@@ -8,8 +8,7 @@ import Home from './pages/Home/index';
 //ROUTES
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Logement from './pages/Logement/Logement'
-import Apropos from './/pages/A-propos/Apropos'
-
+import Apropos from './pages/A-propos/Apropos'
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
           <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Apropos" element={<Apropos />} />
-                <Route path="/Logement" element={<Logement />} />
+                <Route path="/Logement/:id" element={<Logement />} />
           </Routes>
     </Router>
     </div>
@@ -26,3 +25,5 @@ function App() {
 }
 
 export default App;
+
+//path id

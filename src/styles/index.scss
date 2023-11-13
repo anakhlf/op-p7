@@ -146,6 +146,7 @@ $secondarycolor: #F7F7F7;
     margin-top: 50px;
 
     .logonb {
+        //logo-nb
         width: 122px;
         height: 39.44px;
         margin: auto;
@@ -159,17 +160,30 @@ $secondarycolor: #F7F7F7;
 }
 
 //A PROPOS
+
 .values-galery {
+    width: 1240px;
+}
+
+.values-galery {
+    margin-top: 38px;
+    margin-bottom: 38px;
+    gap: 30px;
+    margin: auto;
+}
+
+.values-galery,
+.log-equipments,
+.log-description {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin: 38px 0px;
 
     .block-textoverflow {
-        width: 1023px;
-        display: flex;
+        width: 100%;
+        box-sizing: border-box;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         margin: auto;
         border-radius: 5px;
 
@@ -206,19 +220,139 @@ $secondarycolor: #F7F7F7;
             background-color: $secondarycolor;
             color: $primarycolor;
             border-radius: 0px 0px 5px 5px;
-            padding: 0 20px; 
+            padding: 0 20px;
             overflow: hidden;
-            transform-origin: top; 
-            transform: scaleY(0); 
-            opacity: 0; 
+            transform-origin: top;
+            transform: scaleY(0);
+            opacity: 0;
             transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
         }
 
         .text-overflow.open {
-            padding: 22px 20px; 
-            transform: scaleY(1); 
-            opacity: 1; 
+            padding: 22px 20px;
+            transform: scaleY(1);
+            opacity: 1;
         }
 
+    }
+}
+
+
+
+
+//Caroussel
+
+.caroussel {
+    width: 1240px;
+    height: 415px;
+    position: relative;
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
+    margin: auto;
+    border-radius: 25px;
+
+    .log-pictures {
+        width: 1240px;
+        height: 415px;
+        border-radius: 25px;
+    }
+
+    .arrow-left {
+        height: 79.2px;
+        position: absolute;
+        left: 23px;
+        cursor: pointer;
+    }
+
+    .arrow-right {
+        height: 79.2px;
+        position: absolute;
+        right: 23px;
+        cursor: pointer;
+    }
+
+    .counter {
+        color: white;
+        position: absolute;
+        top: 357px;
+        margin-left: 47%;
+    }
+}
+
+.section__log-description {
+    width: 1240px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 30px;
+
+    .div__title-place {
+        color: $primarycolor;
+
+        .log-title {
+            font-size: 36px;
+            font-weight: 500;
+        }
+
+        .log-place {
+            font-size: 18px;
+        }
+    }
+
+    .div__host {
+        display: flex;
+        justify-content: end;
+        color: $primarycolor;
+        gap: 10px;
+        align-items: center;
+        height: 64px;
+
+        .picture-host {
+            border-radius: 100px;
+            width: 64px;
+        }
+    }
+
+    .log-tags {
+        gap: 10px;
+        display: flex;
+        flex-direction: wrap;
+        margin-top: 20px;
+        height: 25px;
+
+        .span__tag {
+            padding: 0 41px;
+            height: 25px;
+            background-color: $primarycolor;
+            border-radius: 10px;
+            color: white;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .div__log-rating {
+        height: 24px;
+
+        .log-rating {
+            display: flex;
+            justify-content: end;
+            margin-top: 27px;
+            gap: 14px;
+        }
+    }
+
+    .log-equipments,
+    .log-description {
+        width: 582px;
+        margin-top: 0px;
+    }
+
+    .log-description {
+        justify-self: end;
     }
 }

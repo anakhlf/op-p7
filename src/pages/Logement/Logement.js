@@ -1,14 +1,20 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+
+//COMPOSENTS
+import Header from '../../components/Header/index'
+import Footer from '../../components/Footer/index'
+import LogPresentation from '../../components/LogPresentation/index'
 
 function Logement() {
+
+  let { id } = useParams();
+
     return (
-      <div className="App">
-        <header className="App-header">
-        </header>
-        <main>
-        </main>
-        <footer>
-        </footer>
+      <div>
+        <Header />
+        <LogPresentation id={id} />
+        <Footer />
       </div>
     );
   }

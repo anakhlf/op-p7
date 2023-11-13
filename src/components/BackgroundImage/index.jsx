@@ -11,3 +11,5 @@ function BackgroundImage() {
     )
 }
 export default BackgroundImage
+
+// props balancer image de fonds en props

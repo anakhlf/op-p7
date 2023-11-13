@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/index.css'; 
 import Arrow from '../../assets/images/icons/arrow_back.png';
-import Values from '../../assets/values.json';
+
 
 function Overflow({title, description,}) {
     const [isOpen, setIsOpen] = useState(false);
