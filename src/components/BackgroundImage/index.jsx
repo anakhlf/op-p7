@@ -1,12 +1,10 @@
-import Imagebackground from '../../assets/images/background_header.png'
 import '../../styles/index.css'; 
 
-
-function BackgroundImage() {
+function BackgroundImage({ imageUrl, altText, text }) {
     return (
         <div className='background__image'>
-            {<img src={Imagebackground} alt="Paysage" className='image-paysage' />}
-            <p className='background-text'>Chez vous, partout et ailleurs</p>
+            {<img src={imageUrl} alt={altText || "Paysage"} className='image-paysage' />}
+            <p className='background-text'>{text}</p>
         </div>
     )
 }

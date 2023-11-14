@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/index.css'; 
 import Overflow from '../Overflow';
 import Ratings from '../Ratings/'
+import listings from '../../assets/listings.json'
 
 function LogDescription({listing}) {
     return  (
@@ -20,11 +21,11 @@ function LogDescription({listing}) {
           <div className='div__log-rating'>
             <Ratings rating={Number(listing.rating)} />
           </div>
-          <div className='log-equipments'>
-            <Overflow title="Équipements" content={listing.equipments.join(', ')} />
-          </div>
           <div className='log-description'>
-            <Overflow title="Description" content={listing.description} />
+            <Overflow key={listing.id} title="Description" description={listing.description} />
+          </div>
+          <div className='log-equipments'>
+            <Overflow title="Équipements" equipments={listing.equipments}/>
           </div>
         </section>
     )

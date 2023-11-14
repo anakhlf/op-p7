@@ -37,14 +37,13 @@ $secondarycolor: #F7F7F7;
             font-size: 24px;
             font-weight: 500;
         }
-    }
 
-    .logo-kasa {
-        width: 210px;
-        height: 68px;
+        .logo-kasa {
+            width: 210px;
+            height: 68px;
+        }
     }
 }
-
 
 //backgroundImage
 
@@ -64,6 +63,7 @@ $secondarycolor: #F7F7F7;
 
     .image-paysage {
         filter: brightness(70%);
+        object-fit: cover;
 
     }
 
@@ -125,6 +125,7 @@ $secondarycolor: #F7F7F7;
                 border-radius: 10px;
                 position: absolute;
                 margin: 0px;
+                object-fit: cover;
             }
         }
     }
@@ -162,14 +163,11 @@ $secondarycolor: #F7F7F7;
 //A PROPOS
 
 .values-galery {
+    margin: auto;
     width: 1240px;
-}
-
-.values-galery {
     margin-top: 38px;
     margin-bottom: 38px;
     gap: 30px;
-    margin: auto;
 }
 
 .values-galery,
@@ -184,7 +182,6 @@ $secondarycolor: #F7F7F7;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: auto;
         border-radius: 5px;
 
         .top-bar {
@@ -222,16 +219,14 @@ $secondarycolor: #F7F7F7;
             border-radius: 0px 0px 5px 5px;
             padding: 0 20px;
             overflow: hidden;
-            transform-origin: top;
-            transform: scaleY(0);
-            opacity: 0;
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            transition: max-height 0.2s ease-in-out, padding 0.2s ease-in-out;
         }
 
         .text-overflow.open {
             padding: 22px 20px;
-            transform: scaleY(1);
-            opacity: 1;
+            max-height: 1000px;
+            /* Ajustez cette valeur en fonction de la hauteur estimée du contenu. */
         }
 
     }
@@ -256,6 +251,7 @@ $secondarycolor: #F7F7F7;
         width: 1240px;
         height: 415px;
         border-radius: 25px;
+        object-fit: cover;
     }
 
     .arrow-left {
@@ -285,7 +281,7 @@ $secondarycolor: #F7F7F7;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     margin-top: 30px;
 
     .div__title-place {
@@ -337,11 +333,11 @@ $secondarycolor: #F7F7F7;
 
     .div__log-rating {
         height: 24px;
+        margin-top: 20px;
 
         .log-rating {
             display: flex;
             justify-content: end;
-            margin-top: 27px;
             gap: 14px;
         }
     }
@@ -349,10 +345,10 @@ $secondarycolor: #F7F7F7;
     .log-equipments,
     .log-description {
         width: 582px;
-        margin-top: 0px;
+        margin-top: 24px;
     }
 
-    .log-description {
+    .log-equipments {
         justify-self: end;
     }
 }
