@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/index.css'; 
-import Overflow from '../Overflow';
+import Accordion from '../Accordion';
 import Ratings from '../Ratings/'
 import listings from '../../assets/listings.json'
 
@@ -22,10 +22,10 @@ function LogDescription({listing}) {
             <Ratings rating={Number(listing.rating)} />
           </div>
           <div className='log-description'>
-            <Overflow key={listing.id} title="Description" description={listing.description} />
+            <Accordion key={listing.id} title="Description" description={listing.description} />
           </div>
           <div className='log-equipments'>
-            <Overflow title="Équipements" equipments={listing.equipments}/>
+            <Accordion title="Équipements" equipments={listing.equipments}/>
           </div>
         </section>
     )

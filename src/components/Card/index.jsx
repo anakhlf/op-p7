@@ -1,10 +1,10 @@
 import '../../styles/index.css'; 
 import { Link } from 'react-router-dom'
 
-function Cart ({id, title, cover}) {
+function Card ({id, title, cover}) {
     return (
-        <Link to={`/logement/${id}`} className="cart">
-            <article className="cart">
+        <Link to={`/logement/${id}`} className="card">
+            <article className="card">
                 <img src={cover} alt={`Couverture de ${title}`} className='image-logement' />
                 <div className='overlay'></div>
                 <p className='logement-title' >{title}</p>
@@ -13,4 +13,4 @@ function Cart ({id, title, cover}) {
     )
 }
 
-export default Cart
+export default Card

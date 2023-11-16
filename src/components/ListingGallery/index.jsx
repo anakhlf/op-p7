@@ -1,5 +1,5 @@
 import React from 'react';
-import Cart from '../Cart/index';
+import Card from '../Card/index';
 
 import '../../styles/index.css'; 
 
@@ -11,7 +11,7 @@ function ListingGallery({ listings }) {
     return (
       <div className="listing-gallery">
         {listings.map(listing => (
-          <Cart key={listing.id} id={listing.id} title={listing.title} cover={listing.cover} />
+          <Card key={listing.id} id={listing.id} title={listing.title} cover={listing.cover} />
         ))}
       </div>
     );

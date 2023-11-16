@@ -9,6 +9,7 @@ import Home from './pages/Home/index';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Logement from './pages/Logement/Logement'
 import Apropos from './pages/A-propos/Apropos'
+import Error from './pages/Error/Error'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/Apropos" element={<Apropos />} />
                 <Route path="/Logement/:id" element={<Logement />} />
+                <Route path="*" element={<Error />} />
           </Routes>
     </Router>
     </div>
@@ -27,5 +29,4 @@ function App() {
 export default App;
 
 //path id
-
 //hover nav

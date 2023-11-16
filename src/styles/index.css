@@ -29,6 +29,13 @@
   font-size: 24px;
   font-weight: 500;
 }
+.nav .div__links .active-link-home:hover,
+.nav .div__links .active-link-about:hover {
+  text-decoration: underline;
+}
+.nav .div__links .nav__link.active {
+  text-decoration: underline;
+}
 .nav .div__links .logo-kasa {
   width: 210px;
   height: 68px;
@@ -75,7 +82,7 @@
   gap: 50px 60px;
   padding: 56px 50px 43px 50px;
 }
-.gallery .listing-gallery .cart {
+.gallery .listing-gallery .card {
   height: 320px;
   width: 320px;
   display: flex;
@@ -88,18 +95,18 @@
   font-weight: 500;
   position: relative;
 }
-.gallery .listing-gallery .cart .overlay {
+.gallery .listing-gallery .card .overlay {
   height: 340px;
   width: 340px;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
   position: absolute;
 }
-.gallery .listing-gallery .cart .logement-title {
+.gallery .listing-gallery .card .logement-title {
   position: absolute;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-.gallery .listing-gallery .cart .image-logement {
+.gallery .listing-gallery .card .image-logement {
   height: 340px;
   width: 340px;
   border-radius: 10px;
@@ -118,7 +125,7 @@
   padding: 66px 0 29px 0;
   margin-top: 50px;
 }
-.footer .logonb {
+.footer .logo-nb {
   width: 122px;
   height: 39.44px;
   margin: auto;
@@ -143,9 +150,9 @@
   display: flex;
   flex-direction: column;
 }
-.values-galery .block-textoverflow,
-.log-equipments .block-textoverflow,
-.log-description .block-textoverflow {
+.values-galery .block-text-accordion,
+.log-equipments .block-text-accordion,
+.log-description .block-text-accordion {
   width: 100%;
   box-sizing: border-box;
   flex-direction: column;
@@ -153,9 +160,9 @@
   align-items: center;
   border-radius: 5px;
 }
-.values-galery .block-textoverflow .top-bar,
-.log-equipments .block-textoverflow .top-bar,
-.log-description .block-textoverflow .top-bar {
+.values-galery .block-text-accordion .top-bar,
+.log-equipments .block-text-accordion .top-bar,
+.log-description .block-text-accordion .top-bar {
   height: 52px;
   background-color: #FF6060;
   display: flex;
@@ -167,28 +174,28 @@
   color: white;
   padding: 0 17px;
 }
-.values-galery .block-textoverflow .top-bar .arrow,
-.log-equipments .block-textoverflow .top-bar .arrow,
-.log-description .block-textoverflow .top-bar .arrow {
+.values-galery .block-text-accordion .top-bar .arrow,
+.log-equipments .block-text-accordion .top-bar .arrow,
+.log-description .block-text-accordion .top-bar .arrow {
   width: 32px;
   height: 32px;
   cursor: pointer;
 }
-.values-galery .block-textoverflow .top-bar .arrow.down,
-.log-equipments .block-textoverflow .top-bar .arrow.down,
-.log-description .block-textoverflow .top-bar .arrow.down {
+.values-galery .block-text-accordion .top-bar .arrow.down,
+.log-equipments .block-text-accordion .top-bar .arrow.down,
+.log-description .block-text-accordion .top-bar .arrow.down {
   transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
-.values-galery .block-textoverflow .top-bar .arrow.up,
-.log-equipments .block-textoverflow .top-bar .arrow.up,
-.log-description .block-textoverflow .top-bar .arrow.up {
+.values-galery .block-text-accordion .top-bar .arrow.up,
+.log-equipments .block-text-accordion .top-bar .arrow.up,
+.log-description .block-text-accordion .top-bar .arrow.up {
   transform: rotate(180deg);
   transition: transform 0.3s ease-in-out;
 }
-.values-galery .block-textoverflow .text-overflow,
-.log-equipments .block-textoverflow .text-overflow,
-.log-description .block-textoverflow .text-overflow {
+.values-galery .block-text-accordion .text-accordion,
+.log-equipments .block-text-accordion .text-accordion,
+.log-description .block-text-accordion .text-accordion {
   background-color: #F7F7F7;
   color: #FF6060;
   border-radius: 0px 0px 5px 5px;
@@ -197,9 +204,9 @@
   max-height: 0;
   transition: max-height 0.2s ease-in-out, padding 0.2s ease-in-out;
 }
-.values-galery .block-textoverflow .text-overflow.open,
-.log-equipments .block-textoverflow .text-overflow.open,
-.log-description .block-textoverflow .text-overflow.open {
+.values-galery .block-text-accordion .text-accordion.open,
+.log-equipments .block-text-accordion .text-accordion.open,
+.log-description .block-text-accordion .text-accordion.open {
   padding: 22px 20px;
   max-height: 1000px;
   /* Ajustez cette valeur en fonction de la hauteur estimée du contenu. */
@@ -304,6 +311,25 @@
 }
 .section__log-description .log-equipments {
   justify-self: end;
+}
+
+.div__error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 139px;
+}
+.div__error .error-title {
+  font-size: 288px;
+  color: #FF6060;
+}
+.div__error .error-oops {
+  font-size: 36px;
+  color: #FF6060;
+}
+.div__error .error-link {
+  color: #FF6060;
 }
 
 /*# sourceMappingURL=index.css.map */
