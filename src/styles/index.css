@@ -1,26 +1,32 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
-  margin: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .nav {
-  margin: auto;
-  margin-top: 45px;
-  margin-bottom: 50px;
-  width: 1240px;
   display: flex;
   flex-direction: row;
+  padding: 45px 0 50px 0;
   justify-content: space-between;
   align-items: center;
+  max-width: 1240px;
+  margin: auto;
 }
 .nav .div__links {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
   gap: 57px;
+  justify-content: end;
 }
 .nav .div__links .nav__link {
   color: black;
@@ -41,25 +47,47 @@
   height: 68px;
 }
 
-.background__image,
-.image-paysage {
-  width: 1240px;
-  height: 223px;
-  border-radius: 25px;
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: 209px;
+  text-align: center;
+  gap: 35px;
+  justify-content: center;
+}
+.footer .logo-nb {
+  width: 122px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.footer .right {
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+  margin: 0px;
 }
 
 .background__image {
-  display: flex;
+  height: 223px;
+  max-width: 1240px;
+  margin: auto;
   position: relative;
+  margin-bottom: 43px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
 }
 .background__image .image-paysage {
-  filter: brightness(70%);
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 25px;
+  filter: brightness(70%);
 }
 .background__image .background-text {
+  margin: 0;
   position: absolute;
   font-size: 48px;
   font-weight: 500;
@@ -67,26 +95,27 @@
 }
 
 .gallery {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 1240px;
   background-color: #F7F7F7;
-  margin-top: 43px;
+  max-width: 1240px;
   border-radius: 25px;
+  margin-bottom: 50px;
 }
 .gallery .listing-gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px 60px;
-  padding: 56px 50px 43px 50px;
+  grid-template-columns: repeat(3, minmax(30%, 1fr));
+  gap: 40px 5%;
+  padding: 56px 50px;
+  width: 100%;
 }
 .gallery .listing-gallery .card {
   height: 320px;
-  width: 320px;
+  width: 100%;
   display: flex;
-  background-color: #FF6060;
   flex-direction: column;
   justify-content: end;
   color: white;
@@ -94,46 +123,26 @@
   border-radius: 10px;
   font-weight: 500;
   position: relative;
+  border-radius: 10px;
 }
 .gallery .listing-gallery .card .overlay {
-  height: 340px;
-  width: 340px;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
   position: absolute;
 }
 .gallery .listing-gallery .card .logement-title {
   position: absolute;
   padding-left: 20px;
-  padding-bottom: 20px;
 }
 .gallery .listing-gallery .card .image-logement {
-  height: 340px;
-  width: 340px;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
   position: absolute;
   margin: 0px;
   object-fit: cover;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: black;
-  gap: 35px;
-  padding: 66px 0 29px 0;
-  margin-top: 50px;
-}
-.footer .logo-nb {
-  width: 122px;
-  height: 39.44px;
-  margin: auto;
-}
-.footer .right {
-  font-weight: 500;
-  font-size: 24px;
-  color: white;
 }
 
 .values-galery {
@@ -209,7 +218,6 @@
 .log-description .block-text-accordion .text-accordion.open {
   padding: 22px 20px;
   max-height: 1000px;
-  /* Ajustez cette valeur en fonction de la hauteur estimée du contenu. */
 }
 
 .caroussel {
@@ -330,6 +338,57 @@
 }
 .div__error .error-link {
   color: #FF6060;
+}
+
+@media (max-width: 767.98px) {
+  .nav {
+    padding: 20px 20px 27px 20px;
+  }
+  .nav .div__links {
+    gap: 26px;
+    justify-content: end;
+  }
+  .nav .div__links .nav__link {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  .nav .logo-kasa {
+    width: 145px;
+    height: 47px;
+  }
+  .footer {
+    gap: 10px;
+  }
+  .footer .right {
+    font-size: 12px;
+    width: 133px;
+    margin: auto;
+    margin: 0 auto;
+  }
+  .background__image {
+    padding: 0 20px 27px 20px;
+    border-radius: 10px;
+    height: 111px;
+    margin-bottom: 0;
+  }
+  .background__image .image-paysage {
+    height: 111px;
+    border-radius: 10px;
+  }
+  .background__image .background-text {
+    max-width: 217px;
+    font-size: 24px;
+    left: 36px;
+  }
+  .gallery {
+    background-color: white;
+  }
+  .gallery .listing-gallery {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 20px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

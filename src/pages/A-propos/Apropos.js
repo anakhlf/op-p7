@@ -11,7 +11,7 @@ function Apropos() {
     return (
       <div>
         <Header />
-        <BackgroundImage imageUrl={Imagebackground} altText="Paysage"/>
+        <BackgroundImage imageUrl={Imagebackground} altText="Paysage" text=""/>
         <ValuesBlock />
         <Footer />
       </div>

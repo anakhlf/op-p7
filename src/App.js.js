@@ -29,4 +29,6 @@ function App() {
 export default App;
 
 //path id
-//hover nav
+//arrondis bas de carte
+//rediger id dans le cas ou id n'existe pas dans logement
+//racourcir distance 404 error

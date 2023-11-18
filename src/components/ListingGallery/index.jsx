@@ -10,6 +10,7 @@ function ListingGallery({ listings }) {
   }
     return (
       <div className="listing-gallery">
+      
         {listings.map(listing => (
           <Card key={listing.id} id={listing.id} title={listing.title} cover={listing.cover} />
         ))}

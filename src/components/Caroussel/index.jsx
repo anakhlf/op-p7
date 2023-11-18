@@ -42,3 +42,5 @@ function Caroussel() {
 }
 
 export default Caroussel;
+
+//ne pas afficher flèche et compteur si pas plus de 1, rajouter une condition devant les images et la div
