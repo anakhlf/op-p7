@@ -21,7 +21,7 @@ function Accordion({title, description, equipments}) {
                 {equipments && Array.isArray(equipments) && (
                         <ul>
                             {equipments.map((equipment, index) => (
-                                <li key={index}>{equipment}</li>
+                                <li key={index} className='li-text'>{equipment}</li>
                             ))}
                         </ul>
                     )}
