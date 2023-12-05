@@ -12,14 +12,19 @@ body {
   height: 100%;
 }
 
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
 .nav {
   display: flex;
   flex-direction: row;
-  padding: 45px 0 50px 0;
+  padding: 45px 100px 50px 100px;
   justify-content: space-between;
   align-items: center;
   max-width: 1240px;
-  margin: 0 8.06%;
+  margin: auto;
 }
 .nav .div__links {
   display: flex;
@@ -72,8 +77,7 @@ body {
 .background__image {
   height: 223px;
   max-width: 1240px;
-  margin: auto;
-  margin: 0 8.06%;
+  margin: 0 8.06% 50px 8.06%;
   position: relative;
   margin-bottom: 43px;
   display: flex;
@@ -137,6 +141,7 @@ body {
 .gallery .listing-gallery .card .logement-title {
   position: absolute;
   padding-left: 20px;
+  padding-right: 20px;
 }
 .gallery .listing-gallery .card .image-logement {
   height: 100%;
@@ -147,32 +152,37 @@ body {
   object-fit: cover;
 }
 
-.values-galery {
-  margin: auto;
-  max-width: 1023px;
-  margin-top: 38px;
-  margin-bottom: 38px;
+.a-propos .values-galery {
   gap: 30px;
+  margin: 38px 0;
+  justify-content: center;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.a-propos .values-galery .block-text-accordion {
+  max-width: 1023px;
+}
+.a-propos .values-galery .block-text-accordion .value-title {
+  font-size: 24px;
 }
 
 .values-galery,
-.log-equipments,
+.log--equipments,
 .log-description {
   display: flex;
   flex-direction: column;
 }
 .values-galery .block-text-accordion,
-.log-equipments .block-text-accordion,
+.log--equipments .block-text-accordion,
 .log-description .block-text-accordion {
   width: 100%;
   box-sizing: border-box;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border-radius: 5px;
 }
 .values-galery .block-text-accordion .top-bar,
-.log-equipments .block-text-accordion .top-bar,
+.log--equipments .block-text-accordion .top-bar,
 .log-description .block-text-accordion .top-bar {
   height: 52px;
   background-color: #FF6060;
@@ -186,26 +196,26 @@ body {
   padding: 0 17px;
 }
 .values-galery .block-text-accordion .top-bar .arrow,
-.log-equipments .block-text-accordion .top-bar .arrow,
+.log--equipments .block-text-accordion .top-bar .arrow,
 .log-description .block-text-accordion .top-bar .arrow {
   width: 32px;
   height: 32px;
   cursor: pointer;
 }
 .values-galery .block-text-accordion .top-bar .arrow.down,
-.log-equipments .block-text-accordion .top-bar .arrow.down,
+.log--equipments .block-text-accordion .top-bar .arrow.down,
 .log-description .block-text-accordion .top-bar .arrow.down {
   transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
 .values-galery .block-text-accordion .top-bar .arrow.up,
-.log-equipments .block-text-accordion .top-bar .arrow.up,
+.log--equipments .block-text-accordion .top-bar .arrow.up,
 .log-description .block-text-accordion .top-bar .arrow.up {
   transform: rotate(180deg);
   transition: transform 0.3s ease-in-out;
 }
 .values-galery .block-text-accordion .text-accordion,
-.log-equipments .block-text-accordion .text-accordion,
+.log--equipments .block-text-accordion .text-accordion,
 .log-description .block-text-accordion .text-accordion {
   background-color: #F7F7F7;
   color: #FF6060;
@@ -216,7 +226,7 @@ body {
   transition: max-height 0.2s ease-in-out, padding 0.2s ease-in-out;
 }
 .values-galery .block-text-accordion .text-accordion.open,
-.log-equipments .block-text-accordion .text-accordion.open,
+.log--equipments .block-text-accordion .text-accordion.open,
 .log-description .block-text-accordion .text-accordion.open {
   padding: 22px 20px;
   max-height: 1000px;
@@ -227,7 +237,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin: 0 8.06%;
+  margin: auto;
+  padding-right: 100px;
+  padding-left: 100px;
 }
 .log-description .caroussel {
   box-sizing: border-box;
@@ -237,6 +249,7 @@ body {
   flex-direction: wrap;
   align-items: center;
   border-radius: 25px;
+  max-width: 1240px;
 }
 .log-description .caroussel .image-container {
   width: 100%;
@@ -267,7 +280,7 @@ body {
   color: white;
   position: absolute;
   top: 357px;
-  margin-left: 47%;
+  margin-left: 49%;
 }
 
 .section__log-description {
@@ -324,22 +337,23 @@ body {
 }
 .section__log-description .div__log-rating {
   height: 24px;
-  margin-top: 20px;
+  margin-top: 14px;
   justify-self: end;
 }
 .section__log-description .div__log-rating .log-rating {
+  display: flex;
   gap: 14px;
 }
-.section__log-description .log-equipments,
-.section__log-description .log-description {
+.section__log-description .log--equipments,
+.section__log-description .log--description {
   max-width: 582px;
   margin-top: 24px;
 }
-.section__log-description .log-equipments {
+.section__log-description .log--equipments {
   justify-self: end;
   width: 100%;
 }
-.section__log-description .log-description {
+.section__log-description .log--description {
   margin-left: 0;
   margin-right: 0;
 }
@@ -360,7 +374,8 @@ body {
 .div__error .error-oops {
   font-size: 36px;
   color: #FF6060;
-  margin: 0;
+  margin: 0 100px;
+  text-align: center;
 }
 .div__error .error-link {
   color: #FF6060;
@@ -376,18 +391,22 @@ body {
   .nav {
     padding: 20px 20px 27px 20px;
     margin: 0;
+    justify-content: start;
   }
   .nav .div__links {
-    gap: 26px;
+    width: 100%;
+    display: FLEX;
     justify-content: end;
+    margin-left: 11.47%;
+    gap: 6.93%;
   }
   .nav .div__links .nav__link {
     font-size: 12px;
     text-transform: uppercase;
   }
   .nav .logo-kasa {
-    width: 145px;
-    height: 47px;
+    max-width: 145px;
+    height: auto;
   }
   .footer {
     gap: 10px;
@@ -425,8 +444,21 @@ body {
     padding: 0 20px;
     gap: 20px;
   }
+  .a-propos .values-galery {
+    margin: 0px;
+    margin-bottom: 19px;
+    padding-left: 19px;
+    padding-right: 19px;
+    gap: 20px;
+  }
+  .a-propos .values-galery .block-text-accordion {
+    padding: 0;
+  }
+  .a-propos .values-galery .block-text-accordion .value-title {
+    font-size: 13px;
+  }
   .values-galery,
-  .log-equipments,
+  .log--equipments,
   .log-description {
     padding: 0 20px 0 20px;
     gap: 20px;
@@ -434,59 +466,65 @@ body {
     margin-bottom: 20px;
   }
   .values-galery .block-text-accordion,
-  .log-equipments .block-text-accordion,
+  .log--equipments .block-text-accordion,
   .log-description .block-text-accordion {
     font-size: 13px;
   }
   .values-galery .block-text-accordion .top-bar,
-  .log-equipments .block-text-accordion .top-bar,
+  .log--equipments .block-text-accordion .top-bar,
   .log-description .block-text-accordion .top-bar {
     height: 30px;
   }
   .values-galery .block-text-accordion .top-bar .arrow,
-  .log-equipments .block-text-accordion .top-bar .arrow,
+  .log--equipments .block-text-accordion .top-bar .arrow,
   .log-description .block-text-accordion .top-bar .arrow {
     width: 16px;
     height: auto;
   }
   .values-galery .block-text-accordion .text-accordion,
-  .values-galery .log-equipments .block-text-accordion .text-accordion,
-  .values-galery .log-description .block-text-accordion .text-accordion,
-  .log-equipments .block-text-accordion .text-accordion,
-  .log-equipments .log-equipments .block-text-accordion .text-accordion,
-  .log-equipments .log-description .block-text-accordion .text-accordion,
+  .values-galery .log--equipments .block-text-accordion .text-accordion,
+  .values-galery .log--description .block-text-accordion .text-accordion,
+  .log--equipments .block-text-accordion .text-accordion,
+  .log--equipments .log--equipments .block-text-accordion .text-accordion,
+  .log--equipments .log--description .block-text-accordion .text-accordion,
   .log-description .block-text-accordion .text-accordion,
-  .log-description .log-equipments .block-text-accordion .text-accordion,
-  .log-description .log-description .block-text-accordion .text-accordion {
+  .log-description .log--equipments .block-text-accordion .text-accordion,
+  .log-description .log--description .block-text-accordion .text-accordion {
     padding: 0 10px;
     font-size: 12px;
   }
   .values-galery .block-text-accordion .text-accordion.open,
-  .values-galery .log-equipments .block-text-accordion .text-accordion.open,
-  .values-galery .log-description .block-text-accordion .text-accordion.open,
-  .log-equipments .block-text-accordion .text-accordion.open,
-  .log-equipments .log-equipments .block-text-accordion .text-accordion.open,
-  .log-equipments .log-description .block-text-accordion .text-accordion.open,
+  .values-galery .log--equipments .block-text-accordion .text-accordion.open,
+  .values-galery .log--description .block-text-accordion .text-accordion.open,
+  .log--equipments .block-text-accordion .text-accordion.open,
+  .log--equipments .log--equipments .block-text-accordion .text-accordion.open,
+  .log--equipments .log--description .block-text-accordion .text-accordion.open,
   .log-description .block-text-accordion .text-accordion.open,
-  .log-description .log-equipments .block-text-accordion .text-accordion.open,
-  .log-description .log-description .block-text-accordion .text-accordion.open {
+  .log-description .log--equipments .block-text-accordion .text-accordion.open,
+  .log-description .log--description .block-text-accordion .text-accordion.open {
     padding: 10px 10px;
     font-size: 12px;
   }
   .log-description {
     margin: 0;
   }
+  .log-description .caroussel {
+    height: 325px;
+  }
+  .log-description .caroussel .image-container {
+    height: 325px;
+  }
   .log-description .caroussel .arrow-left,
   .log-description .caroussel .arrow-right {
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 20px;
     z-index: 1;
   }
   .log-description .caroussel .counter {
     display: none;
   }
   .log-description .section__log-description {
-    width: 100%;
+    max-width: 1240px;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -541,15 +579,15 @@ body {
     height: 32px;
     width: 32px;
   }
-  .log-description .section__log-description .log-description {
+  .log-description .section__log-description .log--description {
     order: 6;
     padding: 0;
-    max-width: 670px;
+    max-width: 680px;
   }
-  .log-description .section__log-description .log-equipments {
+  .log-description .section__log-description .log--equipments {
     order: 7;
     padding: 0;
-    max-width: 670px;
+    max-width: 680px;
   }
   .div__error {
     gap: 113px;

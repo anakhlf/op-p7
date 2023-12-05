@@ -11,8 +11,6 @@ $secondarycolor: #F7F7F7;
 * {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-
-
 }
 
 html,
@@ -23,17 +21,21 @@ body {
     height: 100%;
 }
 
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
 
 //HEADER
 
 .nav {
     display: flex;
     flex-direction: row;
-    padding: 45px 0 50px 0;
+    padding: 45px 100px 50px 100px;
     justify-content: space-between;
     align-items: center;
     max-width: 1240px;
-    margin: 0 8.06%;
+    margin: auto;
 
     .div__links {
         display: flex;
@@ -97,8 +99,7 @@ body {
 .background__image {
     height: 223px;
     max-width: 1240px;
-    margin: auto;
-    margin: 0 8.06%;
+    margin: 0 8.06% 50px 8.06%;
     position: relative;
     margin-bottom: 43px;
     display: flex;
@@ -167,6 +168,7 @@ body {
             .logement-title {
                 position: absolute;
                 padding-left: 20px;
+                padding-right: 20px;
             }
 
             .image-logement {
@@ -184,16 +186,29 @@ body {
 
 //A PROPOS
 
-.values-galery {
-    margin: auto;
-    max-width: 1023px;
-    margin-top: 38px;
-    margin-bottom: 38px;
-    gap: 30px;
+.a-propos {
+    .values-galery {
+        gap: 30px;
+        margin: 38px 0;
+        justify-content: center;
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 100px;
+
+        .block-text-accordion {
+            max-width: 1023px;
+
+            .value-title {
+                font-size: 24px;
+            }
+        }
+    }
 }
 
+
+
 .values-galery,
-.log-equipments,
+.log--equipments,
 .log-description {
     display: flex;
     flex-direction: column;
@@ -202,8 +217,6 @@ body {
         width: 100%;
         box-sizing: border-box;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         border-radius: 5px;
 
         .top-bar {
@@ -263,7 +276,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin: 0 8.06%;
+    margin: auto;
+    padding-right: 100px;
+    padding-left: 100px;
 
     .caroussel {
         box-sizing: border-box;
@@ -273,6 +288,7 @@ body {
         flex-direction: wrap;
         align-items: center;
         border-radius: 25px;
+        max-width: 1240px;
 
         .image-container {
             width: 100%;
@@ -307,7 +323,7 @@ body {
             color: white;
             position: absolute;
             top: 357px;
-            margin-left: 47%;
+            margin-left: 49%;
         }
     }
 }
@@ -321,7 +337,6 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     gap: 0 76px;
-
 
     .div__title-place {
         color: $primarycolor;
@@ -376,26 +391,27 @@ body {
 
     .div__log-rating {
         height: 24px;
-        margin-top: 20px;
+        margin-top: 14px;
         justify-self: end;
 
         .log-rating {
+            display: flex;
             gap: 14px;
         }
     }
 
-    .log-equipments,
-    .log-description {
+    .log--equipments,
+    .log--description {
         max-width: 582px;
         margin-top: 24px;
     }
 
-    .log-equipments {
+    .log--equipments {
         justify-self: end;
         width: 100%;
     }
 
-    .log-description {
+    .log--description {
         margin-left: 0;
         margin-right: 0;
     }
@@ -421,7 +437,8 @@ body {
     .error-oops {
         font-size: 36px;
         color: $primarycolor;
-        margin: 0;
+        margin: 0 100px;
+        text-align: center;
     }
 
     .error-link {
@@ -444,10 +461,14 @@ body {
     .nav {
         padding: 20px 20px 27px 20px;
         margin: 0;
+        justify-content: start;
 
         .div__links {
-            gap: 26px;
+            width: 100%;
+            display: FLEX;
             justify-content: end;
+            margin-left: 11.47%;
+            gap: 6.93%;
 
             .nav__link {
                 font-size: 12px;
@@ -456,8 +477,9 @@ body {
         }
 
         .logo-kasa {
-            width: 145px;
-            height: 47px;
+            max-width: 145px;
+            height: auto;
+
         }
     }
 
@@ -509,8 +531,29 @@ body {
 
     //Values
 
+    .a-propos {
+        .values-galery {
+            margin: 0px;
+            margin-bottom: 19px;
+            padding-left: 19px;
+            padding-right: 19px;
+            gap: 20px;
+
+            .block-text-accordion {
+                padding: 0;
+
+                .value-title {
+                    font-size: 13px;
+                }
+            }
+
+        }
+
+
+    }
+
     .values-galery,
-    .log-equipments,
+    .log--equipments,
     .log-description {
         padding: 0 20px 0 20px;
         gap: 20px;
@@ -532,15 +575,15 @@ body {
         }
 
         .block-text-accordion .text-accordion,
-        .log-equipments .block-text-accordion .text-accordion,
-        .log-description .block-text-accordion .text-accordion {
+        .log--equipments .block-text-accordion .text-accordion,
+        .log--description .block-text-accordion .text-accordion {
             padding: 0 10px;
             font-size: 12px;
         }
 
         .block-text-accordion .text-accordion.open,
-        .log-equipments .block-text-accordion .text-accordion.open,
-        .log-description .block-text-accordion .text-accordion.open {
+        .log--equipments .block-text-accordion .text-accordion.open,
+        .log--description .block-text-accordion .text-accordion.open {
             padding: 10px 10px;
             font-size: 12px;
         }
@@ -552,11 +595,16 @@ body {
         margin: 0;
 
         .caroussel {
+            height: 325px;
+
+            .image-container {
+                height: 325px;
+            }
 
             .arrow-left,
             .arrow-right {
-                width: 24px;
-                height: 24px;
+                width: 12px;
+                height: 20px;
                 z-index: 1;
             }
 
@@ -566,7 +614,7 @@ body {
         }
 
         .section__log-description {
-            width: 100%;
+            max-width: 1240px;
             display: flex;
             flex-direction: row;
             position: relative;
@@ -634,16 +682,16 @@ body {
                 }
             }
 
-            .log-description {
+            .log--description {
                 order: 6;
                 padding: 0;
-                max-width: 670px;
+                max-width: 680px;
             }
 
-            .log-equipments {
+            .log--equipments {
                 order: 7;
                 padding: 0;
-                max-width: 670px;
+                max-width: 680px;
             }
         }
 
@@ -671,7 +719,4 @@ body {
             }
         }
     }
-
-
-
 }

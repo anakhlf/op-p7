@@ -8,14 +8,14 @@ import Footer from '../../components/Footer/index'
 import ValuesBlock from '../../components/Values/index'
 
 function Apropos() {
-    return (
-      <div>
-        <Header />
-        <BackgroundImage imageUrl={Imagebackground} altText="Paysage" text=""/>
-        <ValuesBlock />
-        <Footer />
-      </div>
-    );
-  }
+  return (
+    <div className='a-propos'>
+      <Header />
+      <BackgroundImage imageUrl={Imagebackground} altText="Paysage" text=""/>
+      <ValuesBlock />
+      <Footer />
+    </div>
+  );
+}
   
-  export default Apropos;
+export default Apropos;

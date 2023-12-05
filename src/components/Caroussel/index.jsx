@@ -29,18 +29,21 @@ function Caroussel() {
 
     return (
         <div className="caroussel">
-            <img src={ArrowLeft} className='arrow-left' onClick={goToPrevious} alt="Précédent" />
+            {totalImages > 1 && (
+                <img src={ArrowLeft} className='arrow-left' onClick={goToPrevious} alt="Précédent" />
+            )}
             {images.length > 0 && (
                 <div className="image-container">
                     <img src={images[currentIndex]} className="log-pictures" alt={`Image ${currentIndex + 1}`} />
-                    <div className="counter">{`${currentIndex + 1}/${totalImages}`}</div>
+                    {totalImages > 1 && <div className="counter">{`${currentIndex + 1}/${totalImages}`}</div>}
                 </div>
             )}
-            <img src={ArrowRight} className='arrow-right' onClick={goToNext} alt="Suivant" />
+            {totalImages > 1 && (
+                <img src={ArrowRight} className='arrow-right' onClick={goToNext} alt="Suivant" />
+            )}
         </div>
     );
 }
 
 export default Caroussel;
 
-//ne pas afficher flèche et compteur si pas plus de 1, rajouter une condition devant les images et la div

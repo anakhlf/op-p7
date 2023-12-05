@@ -19,12 +19,12 @@ function Accordion({title, description, equipments}) {
             <div className={`text-accordion ${isOpen ? 'open' : ''}`}>
                 {description} 
                 {equipments && Array.isArray(equipments) && (
-                        <ul>
-                            {equipments.map((equipment, index) => (
-                                <li key={index} className='li-text'>{equipment}</li>
-                            ))}
-                        </ul>
-                    )}
+                    <ul>
+                        {equipments.map((equipment, index) => (
+                            <li key={index} className='li-text'>{equipment}</li>
+                        ))}
+                    </ul>
+                )}
             </div>
         </div>
     )

@@ -1,14 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/index.css'; 
+import { createRoot } from 'react-dom/client';
+import './styles/index.css';
+import App from './App.js';
 
-//PAGES 
-import App from './App.js'
+const root = createRoot(document.getElementById('root'));
 
-
-ReactDOM.render(
+root.render(
   <React.StrictMode>
-     <App />
-  </React.StrictMode>,
-document.getElementById('root')
-)
+    <App />
+  </React.StrictMode>
+);

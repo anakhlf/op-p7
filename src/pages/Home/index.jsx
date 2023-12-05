@@ -14,9 +14,9 @@ function Home () {
         <div>
             <Header />
             <BackgroundImage 
-            imageUrl={Imagebackground} 
-            altText="Paysage"
-            text="Chez vous, partout et ailleurs"
+                imageUrl={Imagebackground} 
+                altText="Paysage"
+                text="Chez vous, partout et ailleurs"
             />
             <Gallery />
             <Footer />

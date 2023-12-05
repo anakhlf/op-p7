@@ -15,4 +15,3 @@ function ValuesBlock () {
 
 export default ValuesBlock;
 
-//renommer acordéon 

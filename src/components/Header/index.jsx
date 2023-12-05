@@ -6,7 +6,6 @@ import '../../styles/index.css';
  
 function Header() {
     const location = useLocation();
-
     return (
         <nav className='nav'>
             <img src={logo} alt="logo Kasa" className='logo-kasa' />
