@@ -27,9 +27,3 @@ function App() {
 }
 
 export default App;
-
-// revoir indentation  OK
-// App.js.js OK
-// revoir header
-// marge a propos OK 
-// marge oops OK

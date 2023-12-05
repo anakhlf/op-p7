@@ -20,11 +20,11 @@ ul {
 .nav {
   display: flex;
   flex-direction: row;
-  padding: 45px 100px 50px 100px;
+  padding: 45px 0 50px 0;
   justify-content: space-between;
   align-items: center;
   max-width: 1240px;
-  margin: auto;
+  margin: 0 8.06% 0px 8.06%;
 }
 .nav .div__links {
   display: flex;
@@ -238,8 +238,8 @@ ul {
   flex-direction: column;
   gap: 30px;
   margin: auto;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 8.06%;
+  padding-left: 8.06%;
 }
 .log-description .caroussel {
   box-sizing: border-box;
@@ -344,18 +344,15 @@ ul {
   display: flex;
   gap: 14px;
 }
-.section__log-description .log--equipments,
-.section__log-description .log--description {
-  max-width: 582px;
-  margin-top: 24px;
-}
 .section__log-description .log--equipments {
-  justify-self: end;
+  margin-top: 24px;
   width: 100%;
 }
 .section__log-description .log--description {
   margin-left: 0;
   margin-right: 0;
+  margin-top: 24px;
+  max-width: 582px;
 }
 
 .div__error {
