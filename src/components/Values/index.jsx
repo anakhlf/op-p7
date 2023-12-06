@@ -5,11 +5,11 @@ import Accordion from '../Accordion';
 
 function ValuesBlock () {
     return (
-        <div className="values-galery">
+        <section className="values-galery">
             {Values.map(value => (
                 <Accordion key={value.className} title={value.title} description={value.description} />
             ))}
-        </div>
+        </section>
     );
 };
 

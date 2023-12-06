@@ -28,7 +28,7 @@ function Caroussel() {
     };
 
     return (
-        <div className="caroussel">
+        <section className="caroussel">
             {totalImages > 1 && (
                 <img src={ArrowLeft} className='arrow-left' onClick={goToPrevious} alt="Précédent" />
             )}
@@ -41,7 +41,7 @@ function Caroussel() {
             {totalImages > 1 && (
                 <img src={ArrowRight} className='arrow-right' onClick={goToNext} alt="Suivant" />
             )}
-        </div>
+        </section>
     );
 }
 

@@ -31,11 +31,11 @@ ul {
 .nav {
     display: flex;
     flex-direction: row;
-    padding: 45px 0 50px 0;
+    padding: 45px 8.06% 50px 8.06%;
     justify-content: space-between;
     align-items: center;
     max-width: 1240px;
-    margin: 0 8.06% 0px 8.06%;
+    margin: auto;
 
     .div__links {
         display: flex;
@@ -99,12 +99,14 @@ ul {
 .background__image {
     height: 223px;
     max-width: 1240px;
-    margin: 0 8.06% 50px 8.06%;
+    margin: auto;
     position: relative;
     margin-bottom: 43px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 8.06%;
+    padding-right: 8.06%;
 
     .image-paysage {
         width: 100%;
@@ -125,63 +127,69 @@ ul {
 }
 
 //Gallery
-
-.gallery {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    background-color: $secondarycolor;
+.section__gallery {
     max-width: 1240px;
-    border-radius: 25px;
-    margin: 0 8.06% 50px 8.06%;
+    margin: auto;
+    padding-left: 8.06%;
+    padding-right: 8.06%;
 
-    .listing-gallery {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(30%, 1fr));
-        gap: 40px 5%;
-        padding: 56px 50px;
-        width: 100%;
+    .gallery {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $secondarycolor;
+        max-width: 1240px;
+        border-radius: 25px;
+        margin: auto;
 
-        .card {
-            height: 320px;
+        .listing-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(30%, 1fr));
+            gap: 40px 5%;
+            padding: 56px 50px;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
-            color: white;
-            font-size: 18px;
-            border-radius: 10px;
-            font-weight: 500;
-            position: relative;
-            border-radius: 10px;
 
-            .overlay {
-                border-radius: 10px;
-                height: 100%;
+            .card {
+                height: 320px;
                 width: 100%;
-                background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
-                position: absolute;
-            }
-
-            .logement-title {
-                position: absolute;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .image-logement {
-                height: 100%;
-                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                color: white;
+                font-size: 18px;
                 border-radius: 10px;
-                position: absolute;
-                margin: 0px;
-                object-fit: cover;
+                font-weight: 500;
+                position: relative;
+                border-radius: 10px;
+
+                .overlay {
+                    border-radius: 10px;
+                    height: 100%;
+                    width: 100%;
+                    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+                    position: absolute;
+                }
+
+                .logement-title {
+                    position: absolute;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+
+                .image-logement {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 10px;
+                    position: absolute;
+                    margin: 0px;
+                    object-fit: cover;
+                }
             }
         }
     }
 }
+
 
 
 //A PROPOS
@@ -514,18 +522,22 @@ ul {
     }
 
     //Gallery
+    .section__gallery {
+        padding: 0;
 
-    .gallery {
-        background-color: white;
-        margin: 0 0 27px 0;
+        .gallery {
+            background-color: white;
+            margin: 0 0 27px 0;
 
-        .listing-gallery {
-            display: flex;
-            flex-direction: column;
-            padding: 0 20px;
-            gap: 20px;
+            .listing-gallery {
+                display: flex;
+                flex-direction: column;
+                padding: 0 20px;
+                gap: 20px;
+            }
         }
     }
+
 
     //Values
 

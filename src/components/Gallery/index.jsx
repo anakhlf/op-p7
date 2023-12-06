@@ -7,9 +7,11 @@ import ListingGallery from '../ListingGallery';
 
 function Gallery () {
     return (
-    <div className='gallery'>
-        <ListingGallery listings={listings} />
-    </div>
+    <section className='section__gallery'>
+        <div className='gallery'>
+            <ListingGallery listings={listings} />
+        </div>
+    </section>
     )
 }
 

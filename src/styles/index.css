@@ -20,11 +20,11 @@ ul {
 .nav {
   display: flex;
   flex-direction: row;
-  padding: 45px 0 50px 0;
+  padding: 45px 8.06% 50px 8.06%;
   justify-content: space-between;
   align-items: center;
   max-width: 1240px;
-  margin: 0 8.06% 0px 8.06%;
+  margin: auto;
 }
 .nav .div__links {
   display: flex;
@@ -77,12 +77,14 @@ ul {
 .background__image {
   height: 223px;
   max-width: 1240px;
-  margin: 0 8.06% 50px 8.06%;
+  margin: auto;
   position: relative;
   margin-bottom: 43px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 8.06%;
+  padding-right: 8.06%;
 }
 .background__image .image-paysage {
   width: 100%;
@@ -100,25 +102,30 @@ ul {
   text-align: center;
 }
 
-.gallery {
+.section__gallery {
+  max-width: 1240px;
+  margin: auto;
+  padding-left: 8.06%;
+  padding-right: 8.06%;
+}
+.section__gallery .gallery {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
   background-color: #F7F7F7;
   max-width: 1240px;
   border-radius: 25px;
-  margin: 0 8.06% 50px 8.06%;
+  margin: auto;
 }
-.gallery .listing-gallery {
+.section__gallery .gallery .listing-gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(30%, 1fr));
   gap: 40px 5%;
   padding: 56px 50px;
   width: 100%;
 }
-.gallery .listing-gallery .card {
+.section__gallery .gallery .listing-gallery .card {
   height: 320px;
   width: 100%;
   display: flex;
@@ -131,19 +138,19 @@ ul {
   position: relative;
   border-radius: 10px;
 }
-.gallery .listing-gallery .card .overlay {
+.section__gallery .gallery .listing-gallery .card .overlay {
   border-radius: 10px;
   height: 100%;
   width: 100%;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
   position: absolute;
 }
-.gallery .listing-gallery .card .logement-title {
+.section__gallery .gallery .listing-gallery .card .logement-title {
   position: absolute;
   padding-left: 20px;
   padding-right: 20px;
 }
-.gallery .listing-gallery .card .image-logement {
+.section__gallery .gallery .listing-gallery .card .image-logement {
   height: 100%;
   width: 100%;
   border-radius: 10px;
@@ -431,11 +438,14 @@ ul {
     left: 36px;
     text-align: left;
   }
-  .gallery {
+  .section__gallery {
+    padding: 0;
+  }
+  .section__gallery .gallery {
     background-color: white;
     margin: 0 0 27px 0;
   }
-  .gallery .listing-gallery {
+  .section__gallery .gallery .listing-gallery {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
